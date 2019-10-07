@@ -78,9 +78,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 catch (org.json.JSONException e) {
-
+ss
                 }
-               try{
+               try{jjjjkkkk
                    httpRequest("http://www");
                }catch (Exception e){
                    Log.e("Hoge",e.getMessage());
