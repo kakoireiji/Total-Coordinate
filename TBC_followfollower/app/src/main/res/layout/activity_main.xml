@@ -11,6 +11,7 @@
         android:layout_width="411dp"
         android:layout_height="67dp"
         android:background="@drawable/yel"
+        app:layout_constraintBottom_toTopOf="@+id/follow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,6 +28,35 @@
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toTopOf="@+id/textView" />
 
+    <Button
+        android:id="@+id/follow"
+        android:layout_width="206dp"
+        android:layout_height="54dp"
+        android:text="フォロー"
+        app:layout_constraintEnd_toStartOf="@+id/follower"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/follower"
+        android:layout_width="206dp"
+        android:layout_height="54dp"
+        android:text="フォロワー"
+        app:layout_constraintBottom_toTopOf="@+id/followlist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/follow"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ListView
+        android:id="@+id/followlist"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/follow" />
+
     <TextView
         android:id="@+id/banner"
         android:layout_width="415dp"
@@ -35,7 +65,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/followlist" />
 
     <ImageView
         android:id="@+id/timelineicon"
@@ -55,15 +86,15 @@
         android:id="@+id/searchicon"
         android:layout_width="55dp"
         android:layout_height="51dp"
-        android:layout_marginStart="94dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/favoriteicon"
         app:layout_constraintStart_toStartOf="@+id/banner"
         app:layout_constraintTop_toTopOf="@+id/banner"
-        tools:srcCompat="@drawable/kennsaku" />
+        android:src="@drawable/kennsaku2" />
 
     <ImageView
         android:id="@+id/favoriteicon"
@@ -112,24 +143,11 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="75dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/follow"
         app:layout_constraintEnd_toStartOf="@+id/header_title"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/backicon" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="投稿"
-        tools:layout_editor_absoluteX="304dp"
-        tools:layout_editor_absoluteY="80dp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="126dp"
-        android:layout_height="119dp"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="177dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

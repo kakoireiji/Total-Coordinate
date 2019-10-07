@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -62,8 +63,38 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        Picasso.with(context).load(url)
-                .transform(new CircleTransform()).into(imageView);
+        Button Follow=(Button)findViewById(R.id.follow);
+        Follow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                try {
+                    JSONArray jarray = new JSONArray("[{\"ID\":\"001\",\"Name\":\"あんどろいど\"},{\"ID\":\"002\",\"Name\":\"あいふぉん\"}]");
+                    for (int i = 0; i < jarray.length(); ++ i) {
+                        JSONObject json = jarray.getJSONObject(i);
+                        String id   = json.getString("ID");
+                        String name = json.getString("Name");
+
+                    }
+                }
+                catch (org.json.JSONException e) {
+
+                }
+               try{
+                   httpRequest("http://www");
+               }catch (Exception e){
+                   Log.e("Hoge",e.getMessage());
+               }
+
+            }
+        });
+        Button Follower=(Button)findViewById(R.id.follower);
+        Follower.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 }
 
