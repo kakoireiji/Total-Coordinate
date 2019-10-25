@@ -4,13 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 public class Common extends AppCompatActivity {
 
@@ -22,7 +17,7 @@ public class Common extends AppCompatActivity {
 
 
 
-        ImageView TimeLineicon=(ImageView) findViewById(R.id.timelineicon);
+        ImageView TimeLineicon=(ImageView) findViewById(R.id.home);
         TimeLineicon.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent i=new Intent(Common.this, Common.class);

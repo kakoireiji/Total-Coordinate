@@ -6,105 +6,89 @@
     android:layout_height="match_parent"
     tools:context=".Common">
 
+    //タイトル黄色バー
     <TextView
         android:id="@+id/textView"
-        android:layout_width="411dp"
-        android:layout_height="67dp"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
         android:background="@drawable/yel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+     //タイトル
     <TextView
         android:id="@+id/header_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:scrollbarSize="4px"
         android:text="@string/header_title"
-        android:textSize="20sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toTopOf="@+id/textView" />
 
-
+    //黄色バー
     <TextView
         android:id="@+id/banner"
-        android:layout_width="415dp"
+        android:layout_width="0dp"
         android:layout_height="75dp"
         android:background="@drawable/yel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
+    //ホームアイコン
     <ImageView
-        android:id="@+id/timelineicon"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/searchicon"
-        app:layout_constraintStart_toStartOf="@+id/banner"
-        app:layout_constraintTop_toTopOf="@+id/banner"
+        android:id="@+id/home"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchicon"
         app:srcCompat="@drawable/home" />
-
+    //検索アイコン
     <ImageView
         android:id="@+id/searchicon"
-        android:layout_width="55dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/kennsaku2"
         app:layout_constraintEnd_toStartOf="@+id/favoriteicon"
-        app:layout_constraintStart_toStartOf="@+id/banner"
-        app:layout_constraintTop_toTopOf="@+id/banner"
-        android:src="@drawable/kennsaku2" />
-
+        app:layout_constraintStart_toEndOf="@+id/home"
+        app:layout_constraintTop_toTopOf="@+id/favoriteicon" />
+    //お気に入りアイコン
     <ImageView
         android:id="@+id/favoriteicon"
-        android:layout_width="59dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="180dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/banner"
-        app:layout_constraintStart_toStartOf="@+id/banner"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/banner"
         app:srcCompat="@drawable/okiniiri2" />
-
+    //コーディネートアイコン
     <ImageView
         android:id="@+id/coordinateicon"
-        android:layout_width="56dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="@+id/banner"
-        app:layout_constraintStart_toEndOf="@+id/favoriteicon"
-        app:layout_constraintTop_toTopOf="@+id/banner"
-        app:srcCompat="@drawable/huku3" />
-
+        app:layout_constraintTop_toTopOf="@+id/mypageicon"
+        app:srcCompat="@drawable/coordinate" />
+    //マイページアイコン
     <ImageView
         android:id="@+id/mypageicon"
-        android:layout_width="56dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/banner"
-        app:layout_constraintStart_toEndOf="@+id/coordinateicon"
-        app:layout_constraintTop_toTopOf="@+id/banner"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/coordinateicon"
+        app:layout_constraintStart_toEndOf="@+id/favoriteicon"
+        app:layout_constraintTop_toTopOf="@+id/favoriteicon"
         app:srcCompat="@drawable/mypage" />
+
     <!--ImageView
         android:id="@+id/backbtn"
         android:layout_width="37dp"
@@ -117,6 +101,6 @@
         app:layout_constraintEnd_toStartOf="@+id/header_title"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/backicon" /-->
+        app:srcCompat="@drawable/back" /-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
